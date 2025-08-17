@@ -1,69 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Country Time Finder</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f4f8;
-      padding: 20px;
-      text-align: center;
-    }
+🌐 TimeGlobe – World Time Web App
 
-    h1 {
-      color: #333;
-    }
+TimeGlobe is a simple and lightweight web application built using HTML, CSS, and JavaScript that displays the current time of countries around the world. It allows users to quickly check global times from a single page — perfect for travelers, remote workers, students, and anyone working across time zones.
 
-    input, button {
-      padding: 10px;
-      font-size: 16px;
-      margin: 10px;
-    }
+✨ Features
 
-    #result {
-      margin-top: 20px;
-      font-size: 24px;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <h1>🌍 Country Time Finder</h1>
+🕒 Displays real-time clocks for multiple countries
 
-  <input type="text" id="countryInput" placeholder="Enter a country (e.g., USA)">
-  <button onclick="getTime()">Get Time</button>
+🌍 Easy to view and understand world times at a glance
 
-  <div id="result"></div>
+⚡ Fast and responsive — built using pure HTML, CSS & JavaScript
 
-  <script>
-    const countryTimezones = {
-      "Usa": "America/New_York",
-      "Pakistan": "Asia/Karachi",
-      "India": "Asia/Kolkata",
-      "UK": "Europe/London",
-      "Uae": "Asia/Dubai",
-      "Japan": "Asia/Tokyo",
-      "China": "Asia/Shanghai",
-      "Germany": "Europe/Berlin",
-      "France": "Europe/Paris",
-      "Australia": "Australia/Sydney",
-      "Canada": "America/Toronto",
-      "Malasyia": "Asia/Kuala_Lumpur"
-    };
-
-    function getTime() {
-      const country = document.getElementById("countryInput").value.trim();
-      const timezone = countryTimezones[country];
-
-      if (!timezone) {
-        document.getElementById("result").innerText = "❌ Country not found. Try another.";
-        return;
-      }
-
-      const now = new Date().toLocaleString("en-US", { timeZone: timezone });
-      document.getElementById("result").innerText = `🕒 Time in ${country}: ${now}`;
-    }
-  </script>
-</body>
-</html>
+💡 Minimal and user-friendly interface
